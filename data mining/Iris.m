@@ -79,8 +79,8 @@ function show_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 opts=detectImportOptions('Iris.csv');
-opts.SelectedVariableNames=(2:5);
-alldata=readmatrix('Iris.csv',opts);
+opts.SelectedVariableNames=(2:6);
+alldata=table2cell(readtable('Iris.csv',opts));
 set(handles.iristable,'data',alldata);
 
 
